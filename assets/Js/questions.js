@@ -8,12 +8,12 @@ let questions = [
     },
     {
         "title": "Conditionals keywords are:",
-        "choice": ["if", "for", "while", "for each"],
+        "choices": ["if", "for", "while", "for each"],
         "answer": "if"
     },
     {
         "title": "Corgis type include",
-        "choice": ["welsh", "brown", "green", "purple"],
+        "choices": ["welsh", "brown", "green", "purple"],
         "answer": "welsh",
     }
 ]

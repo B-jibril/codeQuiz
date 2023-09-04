@@ -3,7 +3,7 @@ let questions = [
     {
         "title": "Common Data Types Do Not Include:",
         "choices": ["string", "booleans", "alert", "numbers"],
-        "answer": "alerts"
+        "answer": "alert"
 
     },
     {

@@ -1,6 +1,6 @@
 // variable to keep track of quiz state
 let currentQuestionIndex = 0;
-let time = questions.length * 15;
+let time = questions.length * 100;
 let timerID;
 console.log(questions.length);
 //HTML elements;
@@ -13,11 +13,43 @@ let initialElement = document.getElementById("initials");
 let feedBackElement = document.getElementById("feedback");
 
 // the audio sound for  correct and incorrect
-let sfxRight = new Audio("assets/sfx/correct.wav");
-let sfxWrong = new Audio("assets/sfx/incorrect.wav");
+let sfxRight = new Audio('assets/sfx/correct.wav');
+let sfxWrong = new Audio('assets/sfx/incorrect.wav');
 
 
 // add the functions 
+
+function questionClick() {
+    if (this.value !== questions[currentQuestionIndex].answer) {
+        time -= 15;
+
+        if (time < 0) {
+            time = 0;
+        }
+        timerElement.textContent = time;
+        sfxWrong.play();
+        feedBackElement.textContent = "Wrong";
+    } else {
+        sfxRight.play();
+        feedBackElement.textContent = "Correct!";
+    }
+
+    feedBackElement.setAttribute("class", "feedback");
+
+    setTimeout(function () {
+        feedBackElement.setAttribute("class", "feedback hide")
+    }, 1000);
+
+    currentQuestionIndex++;
+
+    if (currentQuestionIndex === questions.length) {
+        quizEnd();
+    } else {
+        getQuestion();
+    }
+}
+
+
 
 function getQuestion() {
     let currentQuestion = questions[currentQuestionIndex];
@@ -39,9 +71,6 @@ function getQuestion() {
     })
 }
 
-function questionClick() {
-
-}
 
 function quizEnd() {
     clearInterval(timerID);

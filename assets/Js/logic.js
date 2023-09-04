@@ -1,6 +1,6 @@
 // variable to keep track of quiz state
 let currentQuestionIndex = 0;
-let time = questions.length * 100;
+let time = questions.length * 20;
 let timerID;
 console.log(questions.length);
 //HTML elements;
@@ -113,10 +113,25 @@ function startQuiz() {
 
 
 function saveHighScore() {
+    let initials = initialElement.value.trim();
+    console.log(initials);
+    if (initials !== "") {
+        let highScores = JSON.parse(localStorage.getItem("highscores")) || [];
+        let newScore = {
+            score: time,
+            initials: initials
+        }
+        highScores.push(newScore);
+        localStorage.setItem("highscores", JSON.stringify(highScores));
 
+        window.location.href = "highscores.html";
+    }
 }
 
-function checkForEnter(Event) {
+function checkForEnter(event) {
+    if (event.key === "Enter") {
+        saveHighScore();
+    }
 
 }
 

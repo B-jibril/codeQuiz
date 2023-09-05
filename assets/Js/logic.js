@@ -108,10 +108,6 @@ function startQuiz() {
 
 }
 
-
-
-
-
 function saveHighScore() {
     let initials = initialElement.value.trim();
     console.log(initials);

@@ -1,6 +1,6 @@
 function printHighScores() {
     // TODO
-    let highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+    let highScores = JSON.parse(localStorage.getItem("highscores")) || [];
 
     highScores.sort(function (a, b) {
         return b.score - a.score;

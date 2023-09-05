@@ -1,7 +1,7 @@
 # CodeQuiz
 Web API For Code Quize:
-- The URL of the functional, deployed application.[Deployed CodeQuiz](https://b-jibril.github.io/codeQuiz/)
-- The URL of the GitHub repository. [GitHub Repository](https://github.com/B-jibril/codeQuiz)
+- The URL of the functional, [Deployed CodeQuiz.](https://b-jibril.github.io/codeQuiz/)
+- The URL of the [GitHub Repository.](https://github.com/B-jibril/codeQuiz)
 
 
 # JavaScript Fundamentals Quiz

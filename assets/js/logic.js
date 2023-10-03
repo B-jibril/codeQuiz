@@ -38,7 +38,7 @@ function questionClick() {
 
     setTimeout(function () {
         feedBackElement.setAttribute("class", "feedback hide")
-    }, 1000);
+    }, 10000);
 
     currentQuestionIndex++;
 
@@ -100,7 +100,7 @@ function startQuiz() {
 
     questionsElement.removeAttribute("class");
 
-    timerID = setInterval(clockTick, 100);
+    timerID = setInterval(clockTick, 1000);
 
     timerElement.textContent = time;
 
